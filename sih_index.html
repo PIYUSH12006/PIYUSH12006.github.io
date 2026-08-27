@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KisanSetu | Smart Procurement Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🌾 <span>KisanSetu</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#centers">Procurement Centers</a>
+            <a href="#queue">Live Queue</a>
+            <a href="#status">Status</a>
+        </div>
+
+        <div class="nav-buttons">
+
+    <a href="farmer-dashboard.html">
+        <button class="login-btn">
+            👨‍🌾 Farmer Dashboard
+        </button>
+    </a>
+
+    <a href="admin-dashboard.html">
+        <button class="admin-login-btn">
+            🏢 Admin Dashboard
+        </button>
+    </a>
+
+</div>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="welcome-text">
+                SMART AGRICULTURAL PROCUREMENT SYSTEM
+            </p>
+
+            <h1>
+                Procurement Made <span>Simple</span> for Every Farmer
+            </h1>
+
+            <p class="hero-description">
+                Book procurement slots, avoid long queues, track your token,
+                and monitor the complete status of your crop procurement —
+                all in one place.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn"
+                        onclick="scrollToSection('centers')">
+                    Book Procurement Slot →
+                </button>
+
+                <button class="secondary-btn"
+                        onclick="scrollToSection('queue')">
+                    Track My Queue
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="weather-card">
+
+                <p>🌤️ Good Morning, Farmer</p>
+
+                <h2>Procurement Dashboard</h2>
+
+                <div class="mini-stats">
+
+                    <div>
+                        <h3>12</h3>
+                        <p>Farmers Waiting</p>
+                    </div>
+
+                    <div>
+                        <h3>4</h3>
+                        <p>Active Counters</p>
+                    </div>
+
+                </div>
+
+                <div class="queue-alert">
+
+                    <span>🎟️</span>
+
+                    <div>
+                        <strong>Your Token: #125</strong>
+                        <p>Estimated time: 35 minutes</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <h2>Everything You Need in One Platform</h2>
+
+        <p class="section-description">
+            A smart and transparent procurement experience for farmers.
+        </p>
+
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📅</div>
+
+                <h3>Smart Scheduling</h3>
+
+                <p>
+                    View procurement dates, available slots and crop details.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🎟️</div>
+
+                <h3>Digital Token</h3>
+
+                <p>
+                    Get a digital token and avoid standing in long queues.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">⏱️</div>
+
+                <h3>Live Queue Tracking</h3>
+
+                <p>
+                    Track your position and estimated waiting time in real time.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📦</div>
+
+                <h3>Procurement Tracking</h3>
+
+                <p>
+                    Monitor your crop from verification to payment.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROCUREMENT CENTERS -->
+
+    <section class="centers" id="centers">
+
+        <div class="section-heading">
+
+            <div>
+                <h2>Nearby Procurement Centers</h2>
+
+                <p>
+                    Select a center and book your procurement slot.
+                </p>
+            </div>
+
+            <button class="location-btn">
+                📍 Use My Location
+            </button>
+
+        </div>
+
+
+        <div class="center-container">
+
+
+            <!-- CENTER 1 -->
+
+            <div class="center-card">
+
+                <div class="center-header">
+
+                    <div>
+                        <h3>🌾 Ghaziabad Wheat Center</h3>
+
+                        <p>📍 Ghaziabad, Uttar Pradesh</p>
+                    </div>
+
+                    <span class="open-badge">
+                        OPEN
+                    </span>
+
+                </div>
+
+
+                <div class="center-info">
+
+                    <p>
+                        📅 Procurement Date:
+                        <strong>28 August 2026</strong>
+                    </p>
+
+                    <p>
+                        🕘 Time:
+                        <strong>9:00 AM – 5:00 PM</strong>
+                    </p>
+
+                    <p>
+                        🌾 Crop:
+                        <strong>Wheat</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="slot-info">
+
+                    <span>Available Slots</span>
+
+                    <strong>24 / 50</strong>
+
+                </div>
+
+
+                <button class="book-btn"
+                        onclick="openBooking('Ghaziabad Wheat Center')">
+
+                    Book Slot
+
+                </button>
+
+            </div>
+
+
+
+            <!-- CENTER 2 -->
+
+            <div class="center-card">
+
+                <div class="center-header">
+
+                    <div>
+
+                        <h3>🌾 Noida Rice Center</h3>
+
+                        <p>📍 Noida, Uttar Pradesh</p>
+
+                    </div>
+
+                    <span class="open-badge">
+                        OPEN
+                    </span>
+
+                </div>
+
+
+                <div class="center-info">
+
+                    <p>
+                        📅 Procurement Date:
+                        <strong>29 August 2026</strong>
+                    </p>
+
+                    <p>
+                        🕘 Time:
+                        <strong>10:00 AM – 4:00 PM</strong>
+                    </p>
+
+                    <p>
+                        🌾 Crop:
+                        <strong>Rice</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="slot-info">
+
+                    <span>Available Slots</span>
+
+                    <strong>15 / 40</strong>
+
+                </div>
+
+
+                <button class="book-btn"
+                        onclick="openBooking('Noida Rice Center')">
+
+                    Book Slot
+
+                </button>
+
+            </div>
+
+
+
+            <!-- CENTER 3 -->
+
+            <div class="center-card">
+
+                <div class="center-header">
+
+                    <div>
+
+                        <h3>🌾 Meerut Crop Center</h3>
+
+                        <p>📍 Meerut, Uttar Pradesh</p>
+
+                    </div>
+
+                    <span class="limited-badge">
+                        LIMITED
+                    </span>
+
+                </div>
+
+
+                <div class="center-info">
+
+                    <p>
+                        📅 Procurement Date:
+                        <strong>30 August 2026</strong>
+                    </p>
+
+                    <p>
+                        🕘 Time:
+                        <strong>9:00 AM – 3:00 PM</strong>
+                    </p>
+
+                    <p>
+                        🌾 Crop:
+                        <strong>Maize</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="slot-info">
+
+                    <span>Available Slots</span>
+
+                    <strong>5 / 30</strong>
+
+                </div>
+
+
+                <button class="book-btn"
+                        onclick="openBooking('Meerut Crop Center')">
+
+                    Book Slot
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- LIVE QUEUE -->
+
+    <section class="queue-section" id="queue">
+
+        <div class="queue-box">
+
+            <div class="queue-left">
+
+                <p class="queue-label">
+                    🎟️ LIVE QUEUE STATUS
+                </p>
+
+                <h2>Your Procurement Token</h2>
+
+                <div class="token-number">
+
+                    #125
+
+                </div>
+
+                <p>
+                    You are currently waiting for procurement.
+                </p>
+
+            </div>
+
+
+            <div class="queue-right">
+
+
+                <div class="queue-stat">
+
+                    <span>Currently Serving</span>
+
+                    <h2 id="currentToken">
+                        #110
+                    </h2>
+
+                </div>
+
+
+                <div class="queue-stat">
+
+                    <span>Farmers Ahead</span>
+
+                    <h2 id="farmersAhead">
+                        15
+                    </h2>
+
+                </div>
+
+
+                <div class="queue-stat">
+
+                    <span>Estimated Waiting</span>
+
+                    <h2 id="waitingTime">
+                        45 min
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="progress-container">
+
+            <div class="progress-label">
+
+                <span>Your Queue Progress</span>
+
+                <span id="progressText">
+                    60%
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div class="progress"
+                     id="progressBar">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROCUREMENT STATUS -->
+
+    <section class="status-section" id="status">
+
+        <h2>Track Your Procurement Status</h2>
+
+        <p>
+            Follow your crop procurement from booking to payment.
+        </p>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item completed">
+
+                <div class="timeline-icon">
+                    ✓
+                </div>
+
+                <h3>Slot Booked</h3>
+
+                <p>
+                    Your procurement slot has been confirmed.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item completed">
+
+                <div class="timeline-icon">
+                    ✓
+                </div>
+
+                <h3>Farmer Arrived</h3>
+
+                <p>
+                    Arrival successfully registered.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item active">
+
+                <div class="timeline-icon">
+                    ⏳
+                </div>
+
+                <h3>Crop Verification</h3>
+
+                <p>
+                    Your crop is currently being verified.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-icon">
+                    4
+                </div>
+
+                <h3>Weight Measurement</h3>
+
+                <p>
+                    Weight will be recorded after verification.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-icon">
+                    5
+                </div>
+
+                <h3>Payment</h3>
+
+                <p>
+                    Payment status will be updated.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- AI SECTION -->
+
+    <section class="ai-section">
+
+        <div class="ai-content">
+
+            <span class="ai-tag">
+                🤖 AI POWERED
+            </span>
+
+            <h2>
+                Smart Waiting Time Prediction
+            </h2>
+
+            <p>
+                KisanSetu analyzes queue length, active counters and
+                historical processing data to estimate your waiting time.
+            </p>
+
+        </div>
+
+
+        <div class="prediction-card">
+
+            <p>
+                AI Prediction
+            </p>
+
+            <h1>
+                42 Minutes
+            </h1>
+
+            <span>
+                Estimated waiting time
+            </span>
+
+            <div class="prediction-details">
+
+                <p>👨‍🌾 Farmers Ahead: 15</p>
+
+                <p>🏢 Active Counters: 4</p>
+
+                <p>⚡ Average Processing: 8 min</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            🌾 KisanSetu
+
+            <p>
+                Smart Procurement. Less Waiting. More Transparency.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#centers">Centers</a>
+
+            <a href="#queue">Queue</a>
+
+            <a href="#status">Status</a>
+
+        </div>
+
+
+        <p class="copyright">
+
+            © 2026 KisanSetu | Smart India Hackathon Project
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- BOOKING MODAL -->
+
+    <div class="modal" id="bookingModal">
+
+        <div class="modal-content">
+
+            <span class="close"
+                  onclick="closeModal()">
+                &times;
+            </span>
+
+            <h2>Book Procurement Slot</h2>
+
+            <p id="selectedCenter"></p>
+
+
+            <form id="bookingForm">
+
+                <label>Farmer Name</label>
+
+                <input
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label>Select Crop</label>
+
+                <select required>
+
+                    <option value="">
+                        Select Crop
+                    </option>
+
+                    <option>Wheat</option>
+
+                    <option>Rice</option>
+
+                    <option>Maize</option>
+
+                </select>
+
+
+                <label>Select Time Slot</label>
+
+                <select required>
+
+                    <option>9:00 AM - 10:00 AM</option>
+
+                    <option>10:00 AM - 11:00 AM</option>
+
+                    <option>11:00 AM - 12:00 PM</option>
+
+                    <option>2:00 PM - 3:00 PM</option>
+
+                </select>
+
+
+                <button type="submit"
+                        class="confirm-btn">
+
+                    Confirm Booking
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SUCCESS MESSAGE -->
+
+    <div class="toast"
+         id="toast">
+
+        Booking successful! Your token is #126 🎟️
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
