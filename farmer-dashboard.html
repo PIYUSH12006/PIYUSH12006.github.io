@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Farmer Dashboard | KisanSetu</title>
+
+    <link
+        rel="stylesheet"
+        href="farmer-dashboard.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            🌾 <span>KisanSetu</span>
+
+        </div>
+
+
+        <div class="profile">
+
+            <div class="profile-icon">
+
+                👨‍🌾
+
+            </div>
+
+            <div>
+
+                <h3>Ramesh Kumar</h3>
+
+                <p>Farmer ID: KS1025</p>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="#dashboard" class="active">
+
+                📊 Dashboard
+
+            </a>
+
+            <a href="#booking">
+
+                📅 My Booking
+
+            </a>
+
+            <a href="#queue">
+
+                🎟️ Live Queue
+
+            </a>
+
+            <a href="#status">
+
+                📦 Procurement Status
+
+            </a>
+
+            <a href="#notifications">
+
+                🔔 Notifications
+
+            </a>
+
+            <a href="index.html">
+
+                🏠 Back to Home
+
+            </a>
+
+        </nav>
+
+
+        <button class="logout-btn">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Good Morning, Ramesh 👋</h1>
+
+                <p>
+                    Here is your procurement overview for today.
+                </p>
+
+            </div>
+
+
+            <div class="top-icons">
+
+                <button>
+                    🔔
+                </button>
+
+                <div class="language">
+
+                    🌐 हिंदी
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DASHBOARD CARDS -->
+
+        <section
+            class="dashboard-cards"
+            id="dashboard"
+        >
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+
+                    🎟️
+
+                </div>
+
+                <div>
+
+                    <p>My Token</p>
+
+                    <h2>#125</h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon yellow">
+
+                    ⏳
+
+                </div>
+
+                <div>
+
+                    <p>Estimated Waiting</p>
+
+                    <h2>45 min</h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+
+                    🌾
+
+                </div>
+
+                <div>
+
+                    <p>Crop</p>
+
+                    <h2>Wheat</h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+
+                    📦
+
+                </div>
+
+                <div>
+
+                    <p>Status</p>
+
+                    <h2>Verification</h2>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- BOOKING + QUEUE -->
+
+        <section
+            class="dashboard-grid"
+            id="booking"
+        >
+
+
+            <!-- BOOKING -->
+
+            <div class="booking-card">
+
+                <div class="card-header">
+
+                    <h2>📅 My Procurement Booking</h2>
+
+                    <span class="confirmed">
+
+                        Confirmed
+
+                    </span>
+
+                </div>
+
+
+                <div class="booking-info">
+
+                    <div>
+
+                        <span>Procurement Center</span>
+
+                        <strong>
+                            Ghaziabad Wheat Center
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Date</span>
+
+                        <strong>
+                            28 August 2026
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Time Slot</span>
+
+                        <strong>
+                            10:00 AM - 11:00 AM
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Crop Quantity</span>
+
+                        <strong>
+                            50 Quintals
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button class="change-slot">
+
+                    Change Slot
+
+                </button>
+
+            </div>
+
+
+
+            <!-- LIVE QUEUE -->
+
+            <div
+                class="live-queue-card"
+                id="queue"
+            >
+
+                <p class="live">
+
+                    ● LIVE QUEUE
+
+                </p>
+
+
+                <h2>Your Position</h2>
+
+
+                <div class="big-token">
+
+                    #125
+
+                </div>
+
+
+                <div class="queue-progress">
+
+                    <div class="progress-info">
+
+                        <span>
+                            Currently Serving
+                        </span>
+
+                        <strong id="serving">
+                            #110
+                        </strong>
+
+                    </div>
+
+
+                    <div class="queue-bar">
+
+                        <div
+                            class="queue-fill"
+                            id="queueFill"
+                        ></div>
+
+                    </div>
+
+
+                    <p>
+
+                        <span id="ahead">
+                            15
+                        </span>
+
+                        farmers ahead of you
+
+                    </p>
+
+                </div>
+
+
+                <h3>
+
+                    ⏱️ Estimated: 
+
+                    <span id="wait">
+                        45 min
+                    </span>
+
+                </h3>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- PROCUREMENT STATUS -->
+
+        <section
+            class="procurement-status"
+            id="status"
+        >
+
+            <div class="section-title">
+
+                <h2>
+                    📦 Procurement Status
+                </h2>
+
+                <p>
+                    Track your crop procurement journey.
+                </p>
+
+            </div>
+
+
+            <div class="status-timeline">
+
+
+                <div class="status-step completed">
+
+                    <div class="step-circle">
+
+                        ✓
+
+                    </div>
+
+                    <h3>Slot Booked</h3>
+
+                    <p>
+                        Booking confirmed
+                    </p>
+
+                </div>
+
+
+
+                <div class="status-step completed">
+
+                    <div class="step-circle">
+
+                        ✓
+
+                    </div>
+
+                    <h3>Arrived</h3>
+
+                    <p>
+                        Arrival registered
+                    </p>
+
+                </div>
+
+
+
+                <div class="status-step active">
+
+                    <div class="step-circle">
+
+                        ⏳
+
+                    </div>
+
+                    <h3>Verification</h3>
+
+                    <p>
+                        Crop quality check
+                    </p>
+
+                </div>
+
+
+
+                <div class="status-step">
+
+                    <div class="step-circle">
+
+                        4
+
+                    </div>
+
+                    <h3>Weight</h3>
+
+                    <p>
+                        Pending
+                    </p>
+
+                </div>
+
+
+
+                <div class="status-step">
+
+                    <div class="step-circle">
+
+                        5
+
+                    </div>
+
+                    <h3>Payment</h3>
+
+                    <p>
+                        Pending
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- NOTIFICATIONS -->
+
+        <section
+            class="notifications"
+            id="notifications"
+        >
+
+            <h2>
+                🔔 Recent Notifications
+            </h2>
+
+
+            <div class="notification-item">
+
+                <span>🎟️</span>
+
+                <div>
+
+                    <strong>
+                        Your turn is approaching!
+                    </strong>
+
+                    <p>
+                        Please reach the procurement center
+                        within 30 minutes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="notification-item">
+
+                <span>🌾</span>
+
+                <div>
+
+                    <strong>
+                        Crop verification started
+                    </strong>
+
+                    <p>
+                        Your wheat is currently being verified.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
