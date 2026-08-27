@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard | KisanSetu</title>
+
+    <link
+        rel="stylesheet"
+        href="admin-dashboard.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-logo">
+
+            🌾 KisanSetu
+
+        </div>
+
+
+        <div class="admin-profile">
+
+            <div class="admin-icon">
+
+                🏢
+
+            </div>
+
+            <div>
+
+                <h3>Procurement Admin</h3>
+
+                <p>Ghaziabad District</p>
+
+            </div>
+
+        </div>
+
+
+        <nav class="admin-menu">
+
+            <a href="#overview" class="active">
+
+                📊 Overview
+
+            </a>
+
+            <a href="#queue-management">
+
+                🎟️ Queue Management
+
+            </a>
+
+            <a href="#farmers">
+
+                👨‍🌾 Farmers
+
+            </a>
+
+            <a href="#centers">
+
+                🏢 Centers
+
+            </a>
+
+            <a href="#analytics">
+
+                📈 Analytics
+
+            </a>
+
+            <a href="index.html">
+
+                🏠 Back to Website
+
+            </a>
+
+        </nav>
+
+
+        <button class="admin-logout">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="admin-main">
+
+
+        <!-- TOPBAR -->
+
+        <div class="admin-topbar">
+
+            <div>
+
+                <h1>
+                    Procurement Management Dashboard
+                </h1>
+
+                <p>
+                    Monitor procurement centers and farmer queues.
+                </p>
+
+            </div>
+
+
+            <button class="date-btn">
+
+                📅 27 August 2026
+
+            </button>
+
+        </div>
+
+
+
+        <!-- OVERVIEW -->
+
+        <section
+            class="overview-cards"
+            id="overview"
+        >
+
+
+            <div class="overview-card">
+
+                <p>Total Farmers</p>
+
+                <h2>1,248</h2>
+
+                <span class="increase">
+
+                    ↑ 12% Today
+
+                </span>
+
+            </div>
+
+
+            <div class="overview-card">
+
+                <p>Currently Waiting</p>
+
+                <h2 id="waitingFarmers">
+                    86
+                </h2>
+
+                <span class="warning">
+
+                    ⚠ Live Queue
+
+                </span>
+
+            </div>
+
+
+            <div class="overview-card">
+
+                <p>Procurement Completed</p>
+
+                <h2>1,062</h2>
+
+                <span class="increase">
+
+                    ↑ 85% Completed
+
+                </span>
+
+            </div>
+
+
+            <div class="overview-card">
+
+                <p>Active Centers</p>
+
+                <h2>12</h2>
+
+                <span class="normal">
+
+                    ● Running Normally
+
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- QUEUE MANAGEMENT -->
+
+        <section
+            class="queue-management"
+            id="queue-management"
+        >
+
+
+            <div class="management-header">
+
+                <div>
+
+                    <h2>
+                        🎟️ Live Queue Management
+                    </h2>
+
+                    <p>
+                        Ghaziabad Wheat Procurement Center
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="next-token-btn"
+                    onclick="nextToken()"
+                >
+
+                    Call Next Farmer →
+
+                </button>
+
+            </div>
+
+
+            <div class="queue-management-grid">
+
+
+                <div class="current-serving">
+
+                    <p>
+                        CURRENTLY SERVING
+                    </p>
+
+                    <h1 id="adminCurrentToken">
+
+                        #110
+
+                    </h1>
+
+                    <span>
+                        Farmer: Ramesh Kumar
+                    </span>
+
+                </div>
+
+
+                <div class="queue-info-card">
+
+                    <span>
+                        Next Token
+                    </span>
+
+                    <h2 id="nextTokenNumber">
+
+                        #111
+
+                    </h2>
+
+                </div>
+
+
+                <div class="queue-info-card">
+
+                    <span>
+                        Farmers Waiting
+                    </span>
+
+                    <h2 id="adminWaiting">
+
+                        86
+
+                    </h2>
+
+                </div>
+
+
+                <div class="queue-info-card">
+
+                    <span>
+                        Active Counters
+                    </span>
+
+                    <h2>
+
+                        4
+
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FARMERS TABLE -->
+
+        <section
+            class="farmers-section"
+            id="farmers"
+        >
+
+            <div class="farmers-header">
+
+                <div>
+
+                    <h2>
+                        👨‍🌾 Farmers in Queue
+                    </h2>
+
+                    <p>
+                        Manage and monitor farmer procurement status.
+                    </p>
+
+                </div>
+
+
+                <input
+                    type="text"
+                    id="farmerSearch"
+                    placeholder="Search farmer..."
+                    onkeyup="searchFarmer()"
+                >
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table id="farmerTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Token</th>
+
+                            <th>Farmer</th>
+
+                            <th>Crop</th>
+
+                            <th>Quantity</th>
+
+                            <th>Status</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>#111</td>
+
+                            <td>Rajesh Kumar</td>
+
+                            <td>Wheat</td>
+
+                            <td>40 Quintals</td>
+
+                            <td>
+
+                                <span class="status waiting">
+                                    Waiting
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="serve-btn"
+                                    onclick="updateStatus(this)"
+                                >
+
+                                    Mark Served
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#112</td>
+
+                            <td>Suresh Singh</td>
+
+                            <td>Wheat</td>
+
+                            <td>60 Quintals</td>
+
+                            <td>
+
+                                <span class="status waiting">
+                                    Waiting
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="serve-btn"
+                                    onclick="updateStatus(this)"
+                                >
+
+                                    Mark Served
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#113</td>
+
+                            <td>Mahesh Verma</td>
+
+                            <td>Rice</td>
+
+                            <td>35 Quintals</td>
+
+                            <td>
+
+                                <span class="status verification">
+                                    Verification
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="serve-btn"
+                                    onclick="updateStatus(this)"
+                                >
+
+                                    Complete
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>#114</td>
+
+                            <td>Amit Sharma</td>
+
+                            <td>Wheat</td>
+
+                            <td>50 Quintals</td>
+
+                            <td>
+
+                                <span class="status waiting">
+                                    Waiting
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="serve-btn"
+                                    onclick="updateStatus(this)"
+                                >
+
+                                    Mark Served
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROCUREMENT CENTERS -->
+
+        <section
+            class="centers-section"
+            id="centers"
+        >
+
+            <h2>
+                🏢 Procurement Center Overview
+            </h2>
+
+
+            <div class="admin-centers">
+
+
+                <div class="admin-center-card">
+
+                    <h3>
+                        Ghaziabad Wheat Center
+                    </h3>
+
+                    <p>
+                        👨‍🌾 86 Farmers Waiting
+                    </p>
+
+                    <p>
+                        🎟️ Current Token: #110
+                    </p>
+
+                    <span class="center-normal">
+
+                        ● Normal
+
+                    </span>
+
+                </div>
+
+
+                <div class="admin-center-card">
+
+                    <h3>
+                        Noida Rice Center
+                    </h3>
+
+                    <p>
+                        👨‍🌾 132 Farmers Waiting
+                    </p>
+
+                    <p>
+                        🎟️ Current Token: #87
+                    </p>
+
+                    <span class="center-busy">
+
+                        ● High Crowd
+
+                    </span>
+
+                </div>
+
+
+                <div class="admin-center-card">
+
+                    <h3>
+                        Meerut Crop Center
+                    </h3>
+
+                    <p>
+                        👨‍🌾 42 Farmers Waiting
+                    </p>
+
+                    <p>
+                        🎟️ Current Token: #204
+                    </p>
+
+                    <span class="center-normal">
+
+                        ● Normal
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ANALYTICS -->
+
+        <section
+            class="analytics"
+            id="analytics"
+        >
+
+            <div class="analytics-box">
+
+                <h2>
+                    📈 Today's Procurement Summary
+                </h2>
+
+
+                <div class="analytics-data">
+
+                    <div>
+
+                        <span>Wheat Procured</span>
+
+                        <h2>5,420 Q</h2>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Rice Procured</span>
+
+                        <h2>3,210 Q</h2>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Average Waiting Time</span>
+
+                        <h2>38 Min</h2>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Efficiency</span>
+
+                        <h2>92%</h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
